@@ -32,6 +32,17 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# devise gem
+gem 'devise'
+gem 'devise-i18n'
+
+# Enumerated attributes with I18n and ActiveRecord/Mongoid/MongoMapper/Sequel support
+gem 'enumerize'
+
+# Bootstrap 4
+gem 'bootstrap', '~> 4.0.0'
+gem 'jquery-rails'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -48,14 +59,3 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
-# devise gem
-gem 'devise'
-gem 'devise-i18n'
-
-# Enumerated attributes with I18n and ActiveRecord/Mongoid/MongoMapper/Sequel support
-gem 'enumerize'
-
-# Bootstrap 4
-gem 'bootstrap', '~> 4.0.0'
-gem 'jquery-rails'
