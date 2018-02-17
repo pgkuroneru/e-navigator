@@ -1,6 +1,10 @@
 <ul>
   <% @users.each do |user| %>
-    <li><%= user.id %></li>
-    <li><%= user.email %></li>
+    ユーザー <%= user.id %>
+    <li>名前: <%= user.name %></li>
+    <li>Eメール: <%= user.email %></li>
+    <li>年齢: <%= user.age %></li>
+    <li>性別: <%= user.sex %></li>
+    <li>学校名: <%= user.school_name %></li>
   <% end %>
 </ul>

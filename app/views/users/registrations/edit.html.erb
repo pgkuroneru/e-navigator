@@ -29,6 +29,26 @@
     <%= f.password_field :current_password %>
   </div>
 
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :age %><br />
+    <%= f.date_select :age %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sex %><br />
+    <%= f.select :sex, User.sexes.keys %>
+  </div>
+
+  <div class="field">
+    <%= f.label :school_name %><br />
+    <%= f.text_field :school_name %>
+  </div>
+
   <div><%= f.submit t('.update') %></div>
 <% end %>
 
