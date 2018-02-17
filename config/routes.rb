@@ -11,12 +11,13 @@ Rails.application.routes.draw do
 
   devise_scope :user do
     authenticated :user do
-      root 'users#index', as: :authenticated_root
+      root 'users#index', :to => "users#index", as: :authenticated_root
       get "sign_out", :to => "users/sessions#destroy"
     end
 
     unauthenticated do
-      root 'users/sessions#new', as: :unauthenticated_root
+      root 'users/sessions#new', :to => "users/sessions#new",  as: :unauthenticated_root
+      get "sign_in", :to => "users/sessions#create"
     end
   end
 
