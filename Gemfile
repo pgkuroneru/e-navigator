@@ -52,3 +52,7 @@ gem 'devise-i18n'
 
 # Enumerated attributes with I18n and ActiveRecord/Mongoid/MongoMapper/Sequel support
 gem 'enumerize'
+
+# Bootstrap 4
+gem 'bootstrap', git: 'https://github.com/twbs/bootstrap-rubygem'
+gem 'jquery-rails'
