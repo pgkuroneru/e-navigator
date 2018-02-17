@@ -17,7 +17,6 @@ Rails.application.routes.draw do
 
     unauthenticated do
       root 'users/sessions#new', :to => "users/sessions#new",  as: :unauthenticated_root
-      get "sign_in", :to => "users/sessions#create"
     end
   end
 
