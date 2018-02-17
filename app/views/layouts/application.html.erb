@@ -12,7 +12,7 @@
     <header>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-          <%= link_to 'e-Navigator', "", class: "navbar-brand" %>
+          <%= link_to 'e-Navigator', "/", class: "navbar-brand" %>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <% if user_signed_in? %>
@@ -37,8 +37,13 @@
     </header>
 
     <div class="container">
-      <p class="notice" role="alert"><%= notice %></p>
-      <p class="alert" role="alert"><%= alert %></p>
+      <% if notice %>
+        <br /><p class="notice alert alert-success" role="alert"><%= notice %></p>
+      <% elsif alert %>
+        <br /><p class="alert alert alert-warning" role="alert"><%= alert %></p>
+      <% else %>
+        <br />
+      <% end %>
 
       <%= yield %>
     </div>
