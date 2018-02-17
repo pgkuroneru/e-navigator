@@ -1,11 +1,13 @@
-<h2><%= t('.title', resource: resource_class.model_name.human) %></h2>
+<!--<h1><%= t('.title', resource: resource_class.model_name.human) %></h1>-->
+<h1>プロフィール</h1>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+
   <%= devise_error_messages! %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :email %><br />
-    <%= f.email_field :email %>
+    <%= f.email_field :email, class: "form-control"%>
   </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -14,46 +16,44 @@
     </p>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :password %> <i>(<%= t('.leave_blank_if_you_don_t_want_to_change_it') %>)</i><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+    <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation %>
+    <%= f.password_field :password_confirmation, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :current_password %> <i>(<%= t('.we_need_your_current_password_to_confirm_your_changes') %>)</i><br />
-    <%= f.password_field :current_password %>
+    <%= f.password_field :current_password, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= f.text_field :name, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :age %><br />
-    <%= f.date_select :age %>
+    <%= f.date_select :age, {}, :class => "form-control bootstrap-date-only-width" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :sex %><br />
-    <%= f.select :sex, User.sex.options %>
+    <%= f.select :sex, User.sex.options, {}, :class => "form-control bootstrap-sex-only-width" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :school_name %><br />
-    <%= f.text_field :school_name %>
+    <%= f.text_field :school_name, class: "form-control" %>
   </div>
 
-  <div><%= f.submit t('.update') %></div>
+  <div><%= f.submit t('.update'), class: "btn btn-primary"%></div><br />
 <% end %>
 
-<h3><%= t('.cancel_my_account') %></h3>
-
-<p><%= t('.unhappy') %> <%= link_to t('.cancel_my_account'), registration_path(resource_name), data: { confirm: t('.are_you_sure') }, method: :delete %>.</p>
-
-<%= link_to t('users.shared.links.back'), :back %>
+<h2><%= t('.cancel_my_account') %></h2>
+<p class="text-danger">アカウント削除をする場合のみにクリックしてください。</p>
+<p><%= link_to t('.cancel_my_account'), registration_path(resource_name), class: "btn btn-danger", data: { confirm: t('.are_you_sure') }, method: :delete %></p>

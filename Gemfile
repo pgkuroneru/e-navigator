@@ -54,5 +54,5 @@ gem 'devise-i18n'
 gem 'enumerize'
 
 # Bootstrap 4
-gem 'bootstrap', git: 'https://github.com/twbs/bootstrap-rubygem'
+gem 'bootstrap', '~> 4.0.0'
 gem 'jquery-rails'
