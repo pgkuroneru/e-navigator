@@ -49,3 +49,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # devise gem
 gem 'devise'
 gem 'devise-i18n'
+
+# Enumerated attributes with I18n and ActiveRecord/Mongoid/MongoMapper/Sequel support
+gem 'enumerize'

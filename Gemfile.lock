@@ -60,6 +60,8 @@ GEM
       warden (~> 1.2.3)
     devise-i18n (1.5.1)
       devise (>= 3.4)
+    enumerize (2.2.1)
+      activesupport (>= 3.2)
     erubi (1.7.0)
     execjs (2.7.0)
     ffi (1.9.18)
@@ -173,6 +175,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise
   devise-i18n
+  enumerize
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
   pg (~> 0.18)

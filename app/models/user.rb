@@ -3,5 +3,8 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-  enum sex: { man: 0, woman:1 }
+
+  extend Enumerize
+  extend ActiveModel::Naming
+  enumerize :sex, in: { male: 0, female: 1}
 end
