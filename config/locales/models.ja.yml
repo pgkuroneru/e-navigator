@@ -1,0 +1,17 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        email: Email
+        password: パスワード
+        password_confirmation: パスワード（確認用）
+        remember_me: 次回から自動的にログイン
+        name: 名前
+        age: 年齢
+        sex: 性別
+        school_name: 学校名
+  enumerize:
+    defaults:
+      sex:
+        male: "男性"
+        female: "女性"

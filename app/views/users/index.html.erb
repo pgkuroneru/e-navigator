@@ -1,0 +1,33 @@
+<h1>ユーザー一覧</h1>
+<table class="table table-bordered">
+  <thead class="thead-light">
+  <tr>
+    <th scope="col">名前</th>
+    <th scope="col">Email</th>
+    <th scope="col">年齢</th>
+    <th scope="col">性別</th>
+    <th scope="col">学校名</th>
+  </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= user.email %></td>
+        <% if user.age %>
+          <%
+            @birthday = user.age
+            date_format = "%Y%m%d"
+            birthday = @birthday.to_date
+            @age = (Date.today.strftime(date_format).to_i - birthday.strftime(date_format).to_i) / 10000
+          %>
+          <td><%= @age %></td>
+        <% else %>
+          <td><%= user.age %></td>
+        <% end %>
+        <td><%= user.sex %></td>
+        <td><%= user.school_name %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

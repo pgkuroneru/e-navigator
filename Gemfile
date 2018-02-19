@@ -5,7 +5,10 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
+# Ruby
+ruby '2.4.3'
+# Bundler
+gem 'bundler', '~> 1.16.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
 # Use postgresql as the database for Active Record
@@ -28,6 +31,17 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
+# devise gem
+gem 'devise'
+gem 'devise-i18n'
+
+# Enumerated attributes with I18n and ActiveRecord/Mongoid/MongoMapper/Sequel support
+gem 'enumerize'
+
+# Bootstrap 4
+gem 'bootstrap', '~> 4.0.0'
+gem 'jquery-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
